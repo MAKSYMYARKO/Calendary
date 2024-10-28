@@ -153,6 +153,7 @@ function displayCurrentDateAndHolidays() {
         '15 października': ['Dzień Ręcznika'],
         '16 października': ['Dzień Żywności'],
         '24 października': ['Dzień Kundelka'],
+        '28 października': ['Dzień Odpoczynku dla Zszarganych Nerwów'],
         '31 października': ['Dzień Miast'],
     };
 
