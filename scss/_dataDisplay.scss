@@ -18,13 +18,16 @@ body {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
+    text-align: center;
 
     @include md-screen {
         width: 400px;
+        text-align: center;
     }
 
     @include lg-screen {
         width: 500px;
+        text-align: center;
     }
 }
 
