@@ -153,7 +153,7 @@ function displayCurrentDateAndHolidays() {
         '15 października': ['Dzień Ręcznika'],
         '16 października': ['Dzień Żywności'],
         '24 października': ['Dzień Kundelka'],
-        '28 października': ['Dzień Odpoczynku dla Zszarganych Nerwów'],
+        '28-11': ['Dzień Odpoczynku dla Zszarganych Nerwów'],
         '31 października': ['Dzień Miast'],
     };
 
@@ -164,5 +164,4 @@ function displayCurrentDateAndHolidays() {
     document.getElementById('current-date').innerText = fullDate;
     document.getElementById('holiday-message').innerText = holidayMessage;
 }
-
 displayCurrentDateAndHolidays();
