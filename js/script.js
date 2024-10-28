@@ -153,11 +153,11 @@ function displayCurrentDateAndHolidays() {
         '15 października': ['Dzień Ręcznika'],
         '16 października': ['Dzień Żywności'],
         '24 października': ['Dzień Kundelka'],
-        '28-11': ['Dzień Odpoczynku dla Zszarganych Nerwów'],
+        '28-10': ['Dzień Odpoczynku dla Zszarganych Nerwów'],
         '31 października': ['Dzień Miast'],
     };
 
-    const todayStr = `${day} ${month}`;
+    const todayStr = `${day}-${today.getMonth() + 1}`;
     const holidayMessages = holidays[todayStr];
     const holidayMessage = holidayMessages ? `Dzisiaj: ${holidayMessages.join(', ')}` : 'Dzisiaj nie ma świąt';
 
