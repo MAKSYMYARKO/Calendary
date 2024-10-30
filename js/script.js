@@ -9,6 +9,7 @@ function displayCurrentDateAndHolidays() {
 
     const holidays = {
             '8-01': ['Dzień Sprzątania Biurka'],
+            '12-01':['Urodziny Kochanej Twórcy tej strony'],
             '18-01': ['Dzień Bałwana'],
             '20-01': ['Dzień Pingwinów'],
             '21-01': ['Dzień Babci i Dzień Dziadka', 'Dzień doceniania wiewiórek'],
