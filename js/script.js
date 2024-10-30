@@ -127,7 +127,7 @@ function displayCurrentDateAndHolidays() {
             '16-10': ['Dzień Żywności'],
             '24-10': ['Dzień Kundelka'],
             '28-10': ['Dzień Odpoczynku dla Zszarganych Nerwów'],
-            '31-10': ['Dzień Miast'],
+            '31-10': ['Halloween','Dzień Miast'],
             '1-11': ['Wszystkich Świętych'],
             '11-11': ['Dzień Niepodległości'],
             '21-11': ['Dzień Życzliwości'],
