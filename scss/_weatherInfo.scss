@@ -1,38 +1,116 @@
 @use 'variables' as *;
 @use 'mixins' as *;
 
-.weather-icon{
-    width:170px ;
+.weather-icon {
+    width: 170px;
     margin-top: 30px;
+
+    @include md-screen {
+        width: 400px;
+        text-align: center;
+    }
+
+    @include lg-screen {
+        width: 500px;
+        text-align: center;
+    }
 }
-.weather-info h2{
+
+.weather-info h2 {
     font-size: 24px;
     font-weight: 500;
-    
+    color: $primary-color;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); // Светлая тень для контраста
+
+    @include md-screen {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    @include lg-screen {
+        font-size: 32px;
+        text-align: center;
+    }
 }
-.weather-info h3{
+
+.weather-info h3 {
     font-size: 15px;
     font-weight: 400;
     margin-top: 10px;
+    color: $secondary-color;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+
+    @include md-screen {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    @include lg-screen {
+        font-size: 20px;
+        text-align: center;
+    }
 }
-.details{
+
+.details {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
     margin-top: 50px;
+
+    @include md-screen {
+        justify-content: center;
+    }
+
+    @include lg-screen {
+        justify-content: space-around;
+    }
 }
-.col{
+
+.col {
     display: flex;
     align-items: center;
     text-align: left;
 
+    @include md-screen {
+        text-align: center;
+    }
+
+    @include lg-screen {
+        text-align: center;
+    }
 }
-.col img{
+
+.col img {
     width: 40px;
     margin-right: 10px;
 }
-.humidity , .wind{
+
+.humidity, .wind {
     font-size: 28px;
     margin-top: -6px;
+    color: $highlight-color; 
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+
+    @include md-screen {
+        font-size: 24px;
+    }
+
+    @include lg-screen {
+        font-size: 26px;
+    }
+}
+.tekst{
+    font-size: 28px;
+    margin-top: -6px;
+    color: $highlight-color; 
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+
+    @include md-screen {
+        font-size: 24px;
+    }
+
+    @include lg-screen {
+        font-size: 26px;
+    }
 }

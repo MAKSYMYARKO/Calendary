@@ -1,6 +1,6 @@
 const apiKey = "ce5f8c50f73c3ad5f141de506a888a92";
 const city = "Cracow";
-const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=${city}&lang=pl`;
+const apiUrl = `https://api.openweathermap.org/data/2.5/weather?units=metric&q=cracow&lang=pl`;
 
 
 async function getWeather() {
@@ -28,20 +28,35 @@ async function getWeather() {
 
 function isDaytime(sunrise, sunset) {
     const now = new Date().getTime();
+    console.log("Sunrise:", sunrise, "Sunset:", sunset, "Now:", now);
     return now >= sunrise && now <= sunset;
 }
 
 
 function changeBackground(isDay) {
     const boxElement = document.querySelector('.box');
+    console.log("Is it day>", isDay); 
 
     if (isDay) {
-        boxElement.style.background = "linear-gradient(135deg, #87CEEB, #ffffff)";
+        boxElement.style.background = "linear-gradient(135deg, #87CEEB, #ffffff) !important";
     } else {
-        boxElement.style.background = "linear-gradient(135deg, #2C3E50, #1a1a1a)";
+        boxElement.style.background = "linear-gradient(135deg, #2C3E50, #1a1a1a) !important";
     }
 }
-getWeather();
+function changeWeatherImage(weatherCondition) {
+    const weatherIcon = document.querySelector(".weather-icon");
+    if (weatherCondition === "Clear") {
+        weatherIcon.src = "/assets/img/clear.png"; 
+    } else if (weatherCondition === "Clouds") {
+        weatherIcon.src = "/assets/img/clouds.png"; 
+    } else if (weatherCondition === "Rain") {
+        weatherIcon.src = "/assets/img/rain.png";  
+    } else {
+        console.error(erorr);
+    }
+}
+
+
 
 
 //  FUNKCJA DO WYPISYWANIA DNIA I SWIETA
@@ -193,4 +208,5 @@ function displayCurrentDateAndHolidays() {
 }
 
 displayCurrentDateAndHolidays();
+getWeather();
 

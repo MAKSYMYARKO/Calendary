@@ -129,16 +129,56 @@ body {
   width: 170px;
   margin-top: 30px;
 }
+@media screen and (min-width: 680px) {
+  .weather-icon {
+    width: 400px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .weather-icon {
+    width: 500px;
+    text-align: center;
+  }
+}
 
 .weather-info h2 {
   font-size: 24px;
   font-weight: 500;
+  color: #333333;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 680px) {
+  .weather-info h2 {
+    font-size: 28px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .weather-info h2 {
+    font-size: 32px;
+    text-align: center;
+  }
 }
 
 .weather-info h3 {
   font-size: 15px;
   font-weight: 400;
   margin-top: 10px;
+  color: #555555;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 680px) {
+  .weather-info h3 {
+    font-size: 18px;
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .weather-info h3 {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 .details {
@@ -148,11 +188,31 @@ body {
   padding: 0 20px;
   margin-top: 50px;
 }
+@media screen and (min-width: 680px) {
+  .details {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .details {
+    justify-content: space-around;
+  }
+}
 
 .col {
   display: flex;
   align-items: center;
   text-align: left;
+}
+@media screen and (min-width: 680px) {
+  .col {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .col {
+    text-align: center;
+  }
 }
 
 .col img {
@@ -163,4 +223,33 @@ body {
 .humidity, .wind {
   font-size: 28px;
   margin-top: -6px;
+  color: #ff9900;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 680px) {
+  .humidity, .wind {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .humidity, .wind {
+    font-size: 26px;
+  }
+}
+
+.tekst {
+  font-size: 28px;
+  margin-top: -6px;
+  color: #ff9900;
+  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+}
+@media screen and (min-width: 680px) {
+  .tekst {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .tekst {
+    font-size: 26px;
+  }
 }/*# sourceMappingURL=style.css.map */
