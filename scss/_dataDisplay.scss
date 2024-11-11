@@ -7,8 +7,8 @@ body {
 }
 
 .box {
-    width: 90%;
-    max-width: 470px;
+    width: 70%;
+    max-width: 270px;
     background: linear-gradient(135deg, #87CEEB, #ffffff);  
     color: $colorWhite;  
     margin: 100px auto 0;
@@ -19,13 +19,16 @@ body {
 
 
     @include md-screen {
-        width: 400px;
+        width: 80%;
+        max-width: 370px;
         text-align: center;
     }
 
     @include lg-screen {
-        width: 500px;
+        width: 90%;
+        max-width: 470px;
         text-align: center;
+        
     }
 }
 

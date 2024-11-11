@@ -46,11 +46,11 @@ function changeBackground(isDay) {
 function changeWeatherImage(weatherCondition) {
     const weatherIcon = document.querySelector(".weather-icon");
     if (weatherCondition === "Clear") {
-        weatherIcon.src = "/assets/img/clear.png"; 
+        weatherIcon.src = "/assets/img/clear.webp"; 
     } else if (weatherCondition === "Clouds") {
-        weatherIcon.src = "/assets/img/clouds.png"; 
+        weatherIcon.src = "/assets/img/clouds.webp"; 
     } else if (weatherCondition === "Rain") {
-        weatherIcon.src = "/assets/img/rain.png";  
+        weatherIcon.src = "/assets/img/rain.webp";  
     } else {
         console.error(erorr);
     }
