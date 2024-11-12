@@ -7,11 +7,17 @@ async function getWeather() {
     const response = await fetch(apiUrl + `&appid=${apiKey}`);
     const data = await response.json();
 
-    const sunrise = data.sys.sunrise * 1000;
-    const sunset = data.sys.sunset * 1000;
+    const sunriseUTC = data.sys.sunrise * 1000;
+    const sunsetUTC = data.sys.sunset * 1000;
 
-    const isDay = isDaytime(sunrise, sunset);
+    const localSunrise = new Date(sunriseUTC).toLocaleTimeString("pl-PL", { timeZone: "Europe/Warsaw" });
+    const localSunset = new Date(sunsetUTC).toLocaleTimeString("pl-PL", { timeZone: "Europe/Warsaw" });
 
+    console.log("Wschód słońca:", localSunrise);
+    console.log("Zachód słońca:", localSunset);
+
+
+    const isDay = isDaytime(sunriseUTC, sunsetUTC);
     changeBackground(isDay);
 
     document.querySelector(".city").innerHTML = data.name;
@@ -35,7 +41,11 @@ function isDaytime(sunrise, sunset) {
 
 function changeBackground(isDay) {
     const boxElement = document.querySelector('.box');
-    console.log("Is it day>", isDay); 
+    if(!boxElement){
+        console.error("box nie znaleziony");
+        return;
+    }
+    console.log("Is it day?", isDay); 
 
     if (isDay) {
         boxElement.style.background = "linear-gradient(135deg, #87CEEB, #ffffff) !important";
@@ -46,13 +56,13 @@ function changeBackground(isDay) {
 function changeWeatherImage(weatherCondition) {
     const weatherIcon = document.querySelector(".weather-icon");
     if (weatherCondition === "Clear") {
-        weatherIcon.src = "/assets/img/clear.webp"; 
+        weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/clear.webp"; 
     } else if (weatherCondition === "Clouds") {
-        weatherIcon.src = "/assets/img/clouds.webp"; 
+        weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/clouds.webp"; 
     } else if (weatherCondition === "Rain") {
-        weatherIcon.src = "/assets/img/rain.webp";  
+        weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/rain.webp";  
     } else {
-        console.error(erorr);
+        console.error("Nieznany warunek pogodowy");
     }
 }
 
