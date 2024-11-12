@@ -51,6 +51,7 @@ function changeBackground(isDay) {
         boxElement.style.background = "linear-gradient(135deg, #87CEEB, #ffffff) !important";
     } else {
         boxElement.style.background = "linear-gradient(135deg, #2C3E50, #1a1a1a) !important";
+        boxElement.style.color = "red";
     }
 }
 function changeWeatherImage(weatherCondition) {
@@ -65,6 +66,7 @@ function changeWeatherImage(weatherCondition) {
         console.error("Nieznany warunek pogodowy");
     }
 }
+
 
 
 
