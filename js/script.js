@@ -47,15 +47,16 @@ function changeBackground(isDay) {
 function changeWeatherImage(weatherCondition) {
     const weatherIcon = document.querySelector(".weather-icon");
     if (weatherCondition === "Clear") {
-        weatherIcon.src = "../assets/img/clear.webp"; 
+        weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/clear.webp"; 
     } else if (weatherCondition === "Clouds") {
-        weatherIcon.src = "../assets/img/clouds.webp"; 
+        weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/clouds.webp"; 
     } else if (weatherCondition === "Rain") {
-        weatherIcon.src = "../assets/img/rain.webp";  
+        weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/rain.webp";  
     } else {
-        console.error(erorr);
+        console.error("Nieznany warunek pogodowy");
     }
 }
+
 
 
 
