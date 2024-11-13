@@ -50,9 +50,10 @@ function changeBackground(isDay) {
     console.log("Is it day?", isDay); 
 
     if (isDay) {
-        boxElement.classList.add("day");
-    } else {
         boxElement.classList.add("night");
+
+    } else {
+                boxElement.classList.add("day");
     }
 }
 function changeWeatherImage(weatherCondition) {
