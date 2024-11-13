@@ -14,6 +14,8 @@ async function getWeather() {
     const localSunset = new Date(sunsetUTC).toLocaleTimeString("pl-PL", { timeZone: "Europe/Warsaw" });
     const localNow = new Date().toLocaleTimeString("pl-PL", { timeZone: "Europe/Warsaw"});
 
+    console.log("Wschód słońca:", sunriseUTC);
+    console.log("Zachód słońca:", sunsetUTC);
     console.log("Wschód słońca:", localSunrise);
     console.log("Zachód słońca:", localSunset);
     console.log("Aktualny czas: ", localNow );
