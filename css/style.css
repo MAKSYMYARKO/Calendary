@@ -252,4 +252,7 @@ body {
   .tekst {
     font-size: 26px;
   }
+
+.day {
+   background:linear-gradient(135deg, #87CEEB, #ffffff) !important;
 }/*# sourceMappingURL=style.css.map */
