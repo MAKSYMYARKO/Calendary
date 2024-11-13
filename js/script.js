@@ -7,14 +7,18 @@ async function getWeather() {
     const response = await fetch(apiUrl + `&appid=${apiKey}`);
     const data = await response.json();
 
-    const sunriseUTC = data.sys.sunrise * 1000;
-    const sunsetUTC = data.sys.sunset * 1000;
+    const sunriseUTC = data.sys.sunrise * 1000 - (7 * 60 * 60 * 1000);
+    const sunsetUTC = data.sys.sunset * 1000 - (7 * 60 * 60 * 1000);
 
     const localSunrise = new Date(sunriseUTC).toLocaleTimeString("pl-PL", { timeZone: "Europe/Warsaw" });
     const localSunset = new Date(sunsetUTC).toLocaleTimeString("pl-PL", { timeZone: "Europe/Warsaw" });
+    const localNow = new Date().toLocaleTimeString("pl-PL", { timeZone: "Europe/Warsaw"});
 
+    console.log("Wschód słońca:", sunriseUTC);
+    console.log("Zachód słońca:", sunsetUTC);
     console.log("Wschód słońca:", localSunrise);
     console.log("Zachód słońca:", localSunset);
+    console.log("Aktualny czas: ", localNow );
 
 
     const isDay = isDaytime(sunriseUTC, sunsetUTC);
@@ -48,10 +52,9 @@ function changeBackground(isDay) {
     console.log("Is it day?", isDay); 
 
     if (isDay) {
-        boxElement.style.background = "linear-gradient(135deg, #87CEEB, #ffffff) !important";
+        boxElement.classList.add("day");
     } else {
-        boxElement.style.background = "linear-gradient(135deg, #2C3E50, #1a1a1a) !important";
-        boxElement.style.color = "red";
+        boxElement.classList.add("night");  
     }
 }
 function changeWeatherImage(weatherCondition) {
