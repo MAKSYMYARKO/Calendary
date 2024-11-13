@@ -67,26 +67,35 @@ body {
   background: linear-gradient(135deg, #87CEEB, #ffffff);
   color: white;
   border-radius: 20px;
-  padding: 40px 35px;
+  padding: 20px;
   text-align: center;
   transition: background-color 1s ease-in-out;
 }
-@media screen and (min-width: 680px) {
+@media (max-width: 599px) {
+  .box {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    border-radius: 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .box {
+    margin: 50px auto 0;
+    width: 90%;
+    height: 70vh;
+    max-width: 400px;
+    border-radius: 15px;
+  }
+}
+@media (min-width: 1024px) {
   .box {
     margin: 100px auto 0;
     width: 80%;
     height: 60vh;
-    max-width: 370px;
-    text-align: center;
-  }
-}
-@media screen and (min-width: 1100px) {
-  .box {
-    margin: 100px auto 0;
-    width: 90%;
-    height: 70vh;
-    max-width: 470px;
-    text-align: center;
+    max-width: 600px;
+    border-radius: 20px;
   }
 }
 
@@ -97,111 +106,137 @@ body {
 }
 
 #current-date {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: white;
   padding: 10px;
   border-radius: 5px;
 }
-@media screen and (min-width: 680px) {
+@media (max-width: 599px) {
   #current-date {
-    font-size: 28px;
+    font-size: 18px;
   }
 }
-@media screen and (min-width: 1100px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   #current-date {
-    font-size: 32px;
+    font-size: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  #current-date {
+    font-size: 28px;
   }
 }
 
 #holiday-message {
-  font-size: 18px;
+  font-size: 16px;
   color: white;
   margin-top: 5px;
 }
-@media screen and (min-width: 680px) {
+@media (max-width: 599px) {
   #holiday-message {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
-@media screen and (min-width: 1100px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   #holiday-message {
-    font-size: 22px;
+    font-size: 18px;
+  }
+}
+@media (min-width: 1024px) {
+  #holiday-message {
+    font-size: 20px;
   }
 }
 
 .weather-icon {
-  width: 170px;
-  margin-top: 30px;
+  width: 100px;
+  margin-top: 20px;
   text-align: center;
 }
-@media screen and (min-width: 680px) {
+@media (max-width: 599px) {
   .weather-icon {
-    width: 400px;
-    text-align: center;
+    width: 80px;
   }
 }
-@media screen and (min-width: 1100px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .weather-icon {
-    width: 500px;
-    text-align: center;
+    width: 150px;
+  }
+}
+@media (min-width: 1024px) {
+  .weather-icon {
+    width: 200px;
   }
 }
 
 .weather-info h2 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 500;
   color: #333333;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
-@media screen and (min-width: 680px) {
+@media (max-width: 599px) {
   .weather-info h2 {
-    font-size: 28px;
-    text-align: center;
+    font-size: 18px;
   }
 }
-@media screen and (min-width: 1100px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .weather-info h2 {
-    font-size: 32px;
-    text-align: center;
+    font-size: 24px;
+  }
+}
+@media (min-width: 1024px) {
+  .weather-info h2 {
+    font-size: 28px;
   }
 }
 
 .weather-info h3 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
-  margin-top: 10px;
+  margin-top: 8px;
   color: #555555;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
-@media screen and (min-width: 680px) {
+@media (max-width: 599px) {
   .weather-info h3 {
-    font-size: 18px;
-    text-align: center;
+    font-size: 12px;
   }
 }
-@media screen and (min-width: 1100px) {
+@media (min-width: 600px) and (max-width: 1023px) {
   .weather-info h3 {
-    font-size: 20px;
-    text-align: center;
+    font-size: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .weather-info h3 {
+    font-size: 18px;
   }
 }
 
 .details {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  padding: 0 20px;
-  margin-top: 50px;
+  padding: 0 10px;
+  margin-top: 30px;
 }
-@media screen and (min-width: 680px) {
+@media (max-width: 599px) {
   .details {
+    flex-direction: column;
+  }
+}
+@media (min-width: 600px) and (max-width: 1023px) {
+  .details {
+    flex-direction: row;
     justify-content: space-between;
   }
 }
-@media screen and (min-width: 1100px) {
+@media (min-width: 1024px) {
   .details {
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 
@@ -210,47 +245,60 @@ body {
   align-items: center;
   text-align: left;
 }
-@media screen and (min-width: 680px) {
+@media (max-width: 599px) {
   .col {
     text-align: center;
   }
 }
-@media screen and (min-width: 1100px) {
+@media (min-width: 600px) and (max-width: 1023px) {
+  .col {
+    text-align: left;
+  }
+}
+@media (min-width: 1024px) {
   .col {
     text-align: center;
   }
 }
 
-.humidity, .wind {
-  font-size: 20px;
-  margin-top: -6px;
-  color: #ff9900;
-  text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+.col img {
+  width: 30px;
+  margin-right: 5px;
 }
-@media screen and (min-width: 680px) {
-  .humidity, .wind {
-    font-size: 24px;
+@media (max-width: 599px) {
+  .col img {
+    width: 20px;
   }
 }
-@media screen and (min-width: 1100px) {
-  .humidity, .wind {
-    font-size: 26px;
+@media (min-width: 600px) and (max-width: 1023px) {
+  .col img {
+    width: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .col img {
+    width: 40px;
   }
 }
 
-.tekst {
-  font-size: 20px;
-  margin-top: -6px;
+.humidity, .wind, .tekst {
+  font-size: 18px;
+  margin-top: -4px;
   color: #ff9900;
   text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 }
-@media screen and (min-width: 680px) {
-  .tekst {
-    font-size: 24px;
+@media (max-width: 599px) {
+  .humidity, .wind, .tekst {
+    font-size: 16px;
   }
 }
-@media screen and (min-width: 1100px) {
-  .tekst {
-    font-size: 26px;
+@media (min-width: 600px) and (max-width: 1023px) {
+  .humidity, .wind, .tekst {
+    font-size: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .humidity, .wind, .tekst {
+    font-size: 22px;
   }
 }/*# sourceMappingURL=style.css.map */

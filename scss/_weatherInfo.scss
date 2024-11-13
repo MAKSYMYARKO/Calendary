@@ -2,69 +2,81 @@
 @use 'mixins' as *;
 
 .weather-icon {
-    width: 170px;
-    margin-top: 30px;
+    width: 100px;
+    margin-top: 20px;
     text-align: center;
 
+    @include sm-screen {
+        width: 80px;
+    }
+
     @include md-screen {
-        width: 400px;
-        text-align: center;
+        width: 150px;
     }
 
     @include lg-screen {
-        width: 500px;
-        text-align: center;
+        width: 200px;
     }
 }
 
 .weather-info h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     color: $primary-color;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8); 
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+
+    @include sm-screen {
+        font-size: 18px;
+    }
 
     @include md-screen {
-        font-size: 28px;
-        text-align: center;
+        font-size: 24px;
     }
 
     @include lg-screen {
-        font-size: 32px;
-        text-align: center;
+        font-size: 28px;
     }
 }
 
 .weather-info h3 {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
-    margin-top: 10px;
+    margin-top: 8px;
     color: $secondary-color;
     text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 
+    @include sm-screen {
+        font-size: 12px;
+    }
+
     @include md-screen {
-        font-size: 18px;
-        text-align: center;
+        font-size: 16px;
     }
 
     @include lg-screen {
-        font-size: 20px;
-        text-align: center;
+        font-size: 18px;
     }
 }
 
 .details {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 0 20px;
-    margin-top: 50px;
+    padding: 0 10px;
+    margin-top: 30px;
+
+    @include sm-screen {
+        flex-direction: column;
+    }
 
     @include md-screen {
+        flex-direction: row;
         justify-content: space-between;
     }
 
     @include lg-screen {
-        justify-content: space-between;
+        flex-direction: row;
+        justify-content: space-around;
     }
 }
 
@@ -73,27 +85,51 @@
     align-items: center;
     text-align: left;
 
-    @include md-screen {
+    @include sm-screen {
         text-align: center;
+    }
+
+    @include md-screen {
+        text-align: left;
     }
 
     @include lg-screen {
         text-align: center;
     }
 }
+
+.col img {
+    width: 30px;
+    margin-right: 5px;
+
+    @include sm-screen {
+        width: 20px;
+    }
+
+    @include md-screen {
+        width: 35px;
+    }
+
+    @include lg-screen {
+        width: 40px;
+    }
+}
+
 .humidity, .wind, .tekst {
-    font-size: 23px;
-    margin-top: -6px;
-    color: $highlight-color; 
-    @include text-shadow;
+    font-size: 18px;
+    margin-top: -4px;
+    color: $highlight-color;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+
+    @include sm-screen {
+        font-size: 16px;
+    }
 
     @include md-screen {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     @include lg-screen {
-        font-size: 26px;
-  margin-right: 10px;
-    transition: width 0.3s ease-in-out;
-}
+        font-size: 22px;
+    }
 }
