@@ -7,8 +7,8 @@ async function getWeather() {
     const response = await fetch(apiUrl + `&appid=${apiKey}`);
     const data = await response.json();
 
-    const sunriseUTC = data.sys.sunrise * 1000;
-    const sunsetUTC = data.sys.sunset * 1000;
+    const sunriseUTC = data.sys.sunrise * 1000 - (7 * 60 * 60 * 1000);
+    const sunsetUTC = data.sys.sunset * 1000 - (7 * 60 * 60 * 1000);
 
     const localSunrise = new Date(sunriseUTC).toLocaleTimeString("pl-PL", { timeZone: "Europe/Warsaw" });
     const localSunset = new Date(sunsetUTC).toLocaleTimeString("pl-PL", { timeZone: "Europe/Warsaw" });
@@ -50,10 +50,9 @@ function changeBackground(isDay) {
     console.log("Is it day?", isDay); 
 
     if (isDay) {
-        boxElement.classList.add("night");
-
+        boxElement.classList.add("day");
     } else {
-                boxElement.classList.add("day");
+        boxElement.classList.add("night");  
     }
 }
 function changeWeatherImage(weatherCondition) {
