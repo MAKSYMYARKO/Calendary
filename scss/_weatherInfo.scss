@@ -23,7 +23,6 @@
     font-size: 20px;
     font-weight: 500;
     color: $primary-color;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 
     @include sm-screen {
         font-size: 18px;
@@ -43,7 +42,6 @@
     font-weight: 400;
     margin-top: 8px;
     color: $secondary-color;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 
     @include sm-screen {
         font-size: 12px;
@@ -120,7 +118,6 @@
     font-size: 18px;
     margin-top: -4px;
     color: $highlight-color;
-    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
 
     @include sm-screen {
         font-size: 16px;
