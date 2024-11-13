@@ -5,9 +5,10 @@
     width: 100px;
     margin-top: 20px;
     text-align: center;
+    pointer-events: none;
 
     @include sm-screen {
-        width: 80px;
+        width: 70px;
     }
 
     @include md-screen {
@@ -19,10 +20,11 @@
     }
 }
 
+
 .weather-info h2 {
     font-size: 20px;
     font-weight: 500;
-    color: $primary-color;
+    color: $textColorForDay;
 
     @include sm-screen {
         font-size: 18px;
@@ -39,9 +41,9 @@
 
 .weather-info h3 {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 500;
     margin-top: 8px;
-    color: $secondary-color;
+   color: $textColorForDay;
 
     @include sm-screen {
         font-size: 12px;
@@ -75,7 +77,12 @@
 
     @include lg-screen {
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+    }
+    .material-symbols-outlined{
+        font-size:50px ;
+        color:$textColorForDay;
+
     }
 }
 
@@ -117,27 +124,31 @@
 .humidity, .wind, .tekst {
     font-size: 18px;
     margin-top: -4px;
-    color: $highlight-color;
+    color:$textColorForDay;
 
     @include sm-screen {
-        font-size: 16px;
+        font-size: 18px;
     }
 
     @include md-screen {
-        font-size: 20px;
+        font-size: 22px;
     }
 
     @include lg-screen {
-        font-size: 22px;
+        font-size: 24px;
     }
 }
 .day{
     background: linear-gradient(135deg, #87CEEB, #ffffff) !important;
+    #current-date, #holiday-message{
+        color:rgb(87, 84, 84);
+     }
 }
 .night{
     background: linear-gradient(135deg, #2C3E50, #1a1a1a) !important;
-    .humidity, .wind ,.tekst ,h3 ,h2{
-        color:$colorWhite;
+    .humidity, .wind ,.tekst ,h3 ,h2, #current-date, #holiday-message , .material-symbols-outlined{
+        color:rgb(208, 201, 201);
     }
+    
  }
     

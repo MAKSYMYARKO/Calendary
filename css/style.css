@@ -59,42 +59,45 @@ a {
 body {
   font-family: Arial, sans-serif;
   background-color: #222;
+  user-select: none;
 }
 
 .box {
   width: 100%;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(135deg, #87CEEB, #ffffff);
   color: white;
   border-radius: 20px;
-  padding: 20px;
+  padding: 40px 35px;
   text-align: center;
   transition: background-color 1s ease-in-out;
 }
 @media (max-width: 599px) {
   .box {
-    margin: 0;
-    width: 100%;
-    height: 100vh;
     padding: 20px;
+    height: 100vh;
     border-radius: 0;
   }
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .box {
-    margin: 50px auto 0;
+    margin: 50px auto;
     width: 90%;
     height: 70vh;
-    max-width: 400px;
+    max-width: 370px;
     border-radius: 15px;
   }
 }
 @media (min-width: 1024px) {
   .box {
-    margin: 100px auto 0;
+    margin: 100px auto;
     width: 80%;
     height: 60vh;
-    max-width: 600px;
+    max-width: 470px;
     border-radius: 20px;
   }
 }
@@ -108,7 +111,7 @@ body {
 #current-date {
   font-size: 20px;
   font-weight: 600;
-  color: white;
+  color: #3D4351;
   padding: 10px;
   border-radius: 5px;
 }
@@ -130,7 +133,7 @@ body {
 
 #holiday-message {
   font-size: 16px;
-  color: white;
+  color: #3D4351;
   margin-top: 5px;
 }
 @media (max-width: 599px) {
@@ -153,10 +156,11 @@ body {
   width: 100px;
   margin-top: 20px;
   text-align: center;
+  pointer-events: none;
 }
 @media (max-width: 599px) {
   .weather-icon {
-    width: 80px;
+    width: 70px;
   }
 }
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -173,7 +177,7 @@ body {
 .weather-info h2 {
   font-size: 20px;
   font-weight: 500;
-  color: #333333;
+  color: #3D4351;
 }
 @media (max-width: 599px) {
   .weather-info h2 {
@@ -193,9 +197,9 @@ body {
 
 .weather-info h3 {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 500;
   margin-top: 8px;
-  color: #555555;
+  color: #3D4351;
 }
 @media (max-width: 599px) {
   .weather-info h3 {
@@ -235,8 +239,12 @@ body {
 @media (min-width: 1024px) {
   .details {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
   }
+}
+.details .material-symbols-outlined {
+  font-size: 50px;
+  color: #3D4351;
 }
 
 .col {
@@ -283,31 +291,34 @@ body {
 .humidity, .wind, .tekst {
   font-size: 18px;
   margin-top: -4px;
-  color: #ff9900;
+  color: #3D4351;
 }
 @media (max-width: 599px) {
   .humidity, .wind, .tekst {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 @media (min-width: 600px) and (max-width: 1023px) {
   .humidity, .wind, .tekst {
-    font-size: 20px;
+    font-size: 22px;
   }
 }
 @media (min-width: 1024px) {
   .humidity, .wind, .tekst {
-    font-size: 22px;
+    font-size: 24px;
   }
 }
 
 .day {
   background: linear-gradient(135deg, #87CEEB, #ffffff) !important;
 }
+.day #current-date, .day #holiday-message {
+  color: rgb(87, 84, 84);
+}
 
 .night {
   background: linear-gradient(135deg, #2C3E50, #1a1a1a) !important;
 }
-.night .humidity, .night .wind, .night .tekst, .night h3, .night h2 {
-  color: white;
+.night .humidity, .night .wind, .night .tekst, .night h3, .night h2, .night #current-date, .night #holiday-message, .night .material-symbols-outlined {
+  color: rgb(208, 201, 201);
 }/*# sourceMappingURL=style.css.map */

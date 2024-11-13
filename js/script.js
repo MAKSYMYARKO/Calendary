@@ -32,7 +32,10 @@ async function getWeather() {
     const weatherCondition = data.weather[0].main;
     const description = data.weather[0].description;
     document.querySelector(".weather-condition").innerHTML = `Pogoda:  ${description}`;
+    
     changeWeatherImage(weatherCondition);
+
+    changeHumidityIcon(data.main.humidity);
 }
 
 
@@ -69,10 +72,18 @@ function changeWeatherImage(weatherCondition) {
         console.error("Nieznany warunek pogodowy");
     }
 }
+function changeHumidityIcon(humidity) {
+    const humidityIcon = document.querySelector(".material-symbols-outlined");
 
-
-
-
+    if (humidity <= 33) {
+        humidityIcon.innerHTML = "humidity_low"; 
+    } else if (humidity <= 66) {
+        humidityIcon.innerHTML = "humidity_mid"; 
+    } else {
+        humidityIcon.innerHTML = "humidity_high"; 
+    }
+}
+setInterval(getWeather, 2000); 
 
 //  FUNKCJA DO WYPISYWANIA DNIA I SWIETA
 
