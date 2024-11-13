@@ -305,7 +305,7 @@ body {
 }
 
 .day {
-  background: linear-gradient(135deg, #87CEEB, #ffffff);
+  background: linear-gradient(135deg, #87CEEB, #ffffff) !important;
 }
 
 .night {
