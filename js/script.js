@@ -50,7 +50,7 @@ function changeBackground(isDay) {
     console.log("Is it day?", isDay); 
 
     if (isDay) {
-        boxElement.style.background = "linear-gradient(135deg, #87CEEB, #ffffff) !important";
+        boxElement.style.classList = "day";
     } else {
         boxElement.style.background = "linear-gradient(135deg, #2C3E50, #1a1a1a) !important";
         boxElement.style.color = "red";
