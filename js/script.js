@@ -50,10 +50,9 @@ function changeBackground(isDay) {
     console.log("Is it day?", isDay); 
 
     if (isDay) {
-        boxElement.style.classList = "day";
+        boxElement.classList.add("day");
     } else {
-        boxElement.style.background = "linear-gradient(135deg, #2C3E50, #1a1a1a) !important";
-        boxElement.style.color = "red";
+        boxElement.classList.add("night");
     }
 }
 function changeWeatherImage(weatherCondition) {
