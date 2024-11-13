@@ -307,4 +307,7 @@ body {
 
 .night {
   background: linear-gradient(135deg, #2C3E50, #1a1a1a) !important;
+}
+.night .humidity, .night .wind, .night .tekst, .night h3, .night h2 {
+  color: white;
 }/*# sourceMappingURL=style.css.map */

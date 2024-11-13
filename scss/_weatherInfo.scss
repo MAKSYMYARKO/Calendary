@@ -136,5 +136,8 @@
 }
 .night{
     background: linear-gradient(135deg, #2C3E50, #1a1a1a) !important;
+    .humidity, .wind ,.tekst ,h3 ,h2{
+        color:$colorWhite;
+    }
  }
     
