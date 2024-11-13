@@ -224,7 +224,8 @@ body {
 }
 @media (max-width: 599px) {
   .details {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }
 @media (min-width: 600px) and (max-width: 1023px) {
@@ -301,4 +302,12 @@ body {
   .humidity, .wind, .tekst {
     font-size: 22px;
   }
+}
+
+.day {
+  background: linear-gradient(135deg, #87CEEB, #ffffff);
+}
+
+.night {
+  background: linear-gradient(135deg, #2C3E50, #1a1a1a) !important;
 }/*# sourceMappingURL=style.css.map */

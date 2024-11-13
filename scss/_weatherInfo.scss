@@ -66,7 +66,8 @@
     margin-top: 30px;
 
     @include sm-screen {
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-around;
     }
 
     @include md-screen {
@@ -133,3 +134,10 @@
         font-size: 22px;
     }
 }
+.day{
+background: linear-gradient(135deg, #87CEEB, #ffffff);
+}
+.night{
+    background: linear-gradient(135deg, #2C3E50, #1a1a1a) !important;
+ }
+    
