@@ -255,4 +255,9 @@ body {
 
 .day {
    background:linear-gradient(135deg, #87CEEB, #ffffff) !important;
-}/*# sourceMappingURL=style.css.map */
+}
+.night{
+   background: linear-gradient(135deg, #2C3E50, #1a1a1a) !important;
+}
+   
+   /*# sourceMappingURL=style.css.map */
