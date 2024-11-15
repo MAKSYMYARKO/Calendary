@@ -225,6 +225,10 @@ body {
   margin-top: 30px;
   width: 20vw;
 }
+.details .material-symbols-outlined {
+  font-size: 50px;
+  color: #3D4351;
+}
 @media (max-width: 599px) {
   .details {
     flex-direction: row;
@@ -242,10 +246,6 @@ body {
     flex-direction: row;
     justify-content: space-between;
   }
-}
-.details .material-symbols-outlined {
-  font-size: 50px;
-  color: #3D4351;
 }
 
 .col {

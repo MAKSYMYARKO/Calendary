@@ -61,17 +61,19 @@ function changeBackground(isDay) {
     }
 }
 function changeWeatherImage(weatherCondition) {
+
     const weatherIcon = document.querySelector(".weather-icon");
+ 
+
     if (weatherCondition === "Clear") {
         weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/clear.webp"; 
     } else if (weatherCondition === "Clouds") {
         weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/clouds.webp"; 
     } else if (weatherCondition === "Rain") {
-        weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/rain.webp";  
-    } else if(weatherCondition === "Haze") {
+        weatherIcno.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/rain.webp";  
+    } else if (weatherCondition === "Mist" || weatherCondition === "Mist" || weatherCondition === "Fog" ) {
         weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/haze.webp";
-    }
-     else {
+    }else {
         console.error("Nieznany warunek pogodowy");
     }
 }
@@ -80,13 +82,14 @@ function changeHumidityIcon(humidity) {
 
     if (humidity <= 33) {
         humidityIcon.innerHTML = "humidity_low"; 
-    } else if (humidity <= 66) {
+    }else if (humidity <= 66) {
         humidityIcon.innerHTML = "humidity_mid"; 
-    } else {
+    }
+    else {
         humidityIcon.innerHTML = "humidity_high"; 
     }
 }
-setInterval(getWeather, 2000); 
+setInterval(getWeather, 10000); 
 
 //  FUNKCJA DO WYPISYWANIA DNIA I SWIETA
 

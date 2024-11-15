@@ -65,6 +65,12 @@
     padding: 0 10px;
     margin-top: 30px;
     width: 20vw;
+    
+    .material-symbols-outlined{
+        font-size:50px ;
+        color:$textColorForDay;
+
+    }
 
     @include sm-screen {
         flex-direction: row;
@@ -79,11 +85,6 @@
     @include lg-screen {
         flex-direction: row;
         justify-content: space-between;
-    }
-    .material-symbols-outlined{
-        font-size:50px ;
-        color:$textColorForDay;
-
     }
 }
 
