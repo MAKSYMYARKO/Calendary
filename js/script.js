@@ -68,7 +68,10 @@ function changeWeatherImage(weatherCondition) {
         weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/clouds.webp"; 
     } else if (weatherCondition === "Rain") {
         weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/rain.webp";  
-    } else {
+    } else if(weatherCondition === "Haze") {
+        weatherIcon.src = "https://github.com/MAKSYMYARKO/Calendary/raw/main/assets/img/haze.webp";
+    }
+     else {
         console.error("Nieznany warunek pogodowy");
     }
 }

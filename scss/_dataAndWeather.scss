@@ -1,9 +1,0 @@
-#current-date, #holiday-message, .weather-info h2, .weather-info h3, .humidity, .wind {
-    font-size: 1.5em;
-    text-align: center;
-
-    @include sm-screen {
-        font-size: 1.2em;
-    }
-}
-
