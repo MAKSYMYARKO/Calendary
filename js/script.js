@@ -228,6 +228,7 @@ function displayCurrentDateAndHolidays() {
         '21-11': ['Dzień Życzliwości'],
         '25-12': ['Boże Narodzenie'],
         '26-12': ['Dzień Świętego Szczepana'],
+        '31-12': ['Sylwester']
     };
 
     const todayStr = `${day}-${today.getMonth() + 1}`;
